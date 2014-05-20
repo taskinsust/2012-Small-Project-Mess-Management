@@ -1,0 +1,65 @@
+﻿@using System.Web.UI.WebControls
+@model IEnumerable<TestFileStream.Entity.Bazar>
+
+@{
+    ViewBag.Title = "ViewBazarList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="left" style="float:left ; width : 20% ;padding: 7% 0px 0px 2% ">
+    @Html.Partial("~/Views/Bazar/PartialBazarMenu.cshtml")
+</div>
+<div id="right" style="float:right ;width: 80%; padding: 5% 0px 0px 6% ">
+    @using (Html.BeginForm("Search" , "Bazar"))
+    {
+        <p>
+            <input type="text" name="sFname" placeholder="Search By First Name" />
+
+            @Html.Label("From Date", new { style = "color: white" })
+            <input style="color: black" type="date" id="Fdate" name="Fdate" />
+            @Html.Label("To Date", new { style = "color: white" })
+            <input style="color: black" type="date" id="Tdate" name="Tdate" />
+            <br />
+            <input class="ui-icon-search" type="submit" value="Search" />
+        </p>      
+    }
+<h2 style="color:white">View Bazar List</h2>
+
+<p>
+    @Html.ActionLink("Add New Bazar Cost", "AddBazarCost")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Members.FName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CostDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BazarAmmount)
+        </th>
+        
+        <th> Action </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Members.FName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CostDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BazarAmmount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditBazars", new { Id=item.Id ,Style="color:white" }) |
+            @Html.ActionLink("Details", "DEtailsBazars", new { Id=item.Id }) |
+            @Html.ActionLink("Delete", "DeleteBazars", new { Id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+    </div>

@@ -1,0 +1,35 @@
+﻿@model TestFileStream.Entity.Deposit
+
+@{
+    ViewBag.Title = "DetailsDeposit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="panel panel-primary" style="margin: 0 auto; max-width: 700px; min-width: 300px">
+    <div class="panel-heading">
+        <h2 style="color: white">Details Information For [@ViewBag.NAME] </h2>
+    </div>
+    <div class="panel-body">
+        <div id="full" style="min-width: 300px">
+
+            <table class="table table-bordered table-condensed">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.DepositDate)</th>
+                    <th>@Html.DisplayNameFor(model => model.MonthName)</th>
+                    <th>@Html.DisplayNameFor(model => model.DepositAmmount)</th>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayFor(model => model.DepositDate)</td>
+
+                    <td>@Html.DisplayFor(model => model.MonthName)</td>
+                    <td>@Html.DisplayFor(model => model.DepositAmmount)</td>
+                </tr>
+
+            </table>
+            <p>
+                @* @Html.ActionLink("Edit", "EditMembers", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")*@
+            </p>
+        </div>
+    </div>
+</div>
+

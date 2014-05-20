@@ -1,0 +1,71 @@
+﻿@using System.Web.UI.WebControls
+@model IEnumerable<TestFileStream.Entity.Bazar>
+
+@{
+    ViewBag.Title = "ViewBazarList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="panel panel-primary" style="margin: 0 auto; max-width: 800px; min-width: 300px">
+    <div class="panel-heading">
+        <h2>View Bazar List</h2>
+    </div>
+    <div class="panel-body">
+        @*<div id="left" style="min-width: 100px">
+            @Html.Partial("~/Views/Bazar/PartialBazarMenu.cshtml")
+        </div>*@
+        <div id="right" style="min-width: 200px">
+            @using (Html.BeginForm("Search", "Bazar"))
+            {
+                <ul style="list-style-type: none;margin-left: -38px">
+                    <li style="display: inline">
+                        <input style="display: inline" type="text" name="sFname" placeholder="Search By First Name" /></li>
+                    <li style="display: inline">From:
+                        <input style="display: inline" type="date" id="Fdate" name="Fdate" /></li>
+                    <li style="display: inline">To:
+                        <input style="display: inline" type="date" id="Tdate" name="Tdate" /></li>
+                    <li style="display: inline">
+                        <input style="display: inline" class="btn btn-primary" type="submit" value="Search" />
+                    </li>
+                </ul>
+            }
+            <p>
+                @Html.ActionLink("Add New Bazar Cost", "AddBazarCost")
+            </p>
+        </div>
+        <table class="table table-bordered">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Members.FName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CostDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BazarAmmount)
+                </th>
+
+                <th>Action </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Members.FName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CostDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BazarAmmount)
+                    </td>
+                    <td>
+                            @Html.ActionLink("Edit", "EditBazars", new { Id = item.Id, Style = "color:white" }) |
+                            @Html.ActionLink("Details", "DEtailsBazars", new { Id = item.Id }) |
+                            @Html.ActionLink("Delete", "DeleteBazars", new { Id = item.Id })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

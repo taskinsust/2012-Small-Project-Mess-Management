@@ -1,0 +1,79 @@
+﻿@model IEnumerable<TestFileStream.Entity.Deposit>
+
+@{
+    ViewBag.Title = "ViewDepositList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="panel panel-primary" style="margin: 0 auto; max-width: 800px; min-width: 300px">
+    <div class="panel-heading">
+        <h2>View Deposit List </h2>
+    </div>
+    <div class="panel-body">
+
+        <div id="left" style="float: left; width: 40%; min-width: 100px">
+            @Html.Partial("~/Views/Deposit/PartialDepositMenu.cshtml")
+        </div>
+
+        <div id="right" style="float: right; width: 60%; min-width: 200px">
+
+            @using (Html.BeginForm("Search", "Deposit"))
+            {
+                <p>
+                    <input type="text" name="sFname" placeholder="Search By First Name" />
+
+                    @Html.Label("From Date")
+                    <input type="date" id="Fdate" name="Fdate" />
+                    @Html.Label("To Date")
+                    <input type="date" id="Tdate" name="Tdate" />
+                    <br />
+                    <input class="btn btn-primary" type="submit" value="Search" />
+                </p>      
+            }
+            <p>
+                @Html.ActionLink("Add New Deposit", "DepositAdd")
+            </p>
+            <table class="table table-bordered">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Members.FName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DepositDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MonthName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DepositAmmount)
+                    </th>
+                    <th>Action </th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Members.FName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DepositDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MonthName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DepositAmmount)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "EditDeposit", new { Id = item.Id }) |
+                    @Html.ActionLink("Details", "DetailsDeposit", new { Id = item.Id }) |
+                    @Html.ActionLink("Delete", "DeleteDeposit", new { Id = item.Id })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+
+    </div>
+</div>

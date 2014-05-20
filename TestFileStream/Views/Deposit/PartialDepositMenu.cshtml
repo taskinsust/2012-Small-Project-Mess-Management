@@ -1,0 +1,54 @@
+﻿<style>
+    .shadowblockmenu-v {
+        font:  14px Germand;
+        width: 190px; /* width of menu */
+    }
+
+        .shadowblockmenu-v ul {
+            border: 1px solid #eee;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+            .shadowblockmenu-v ul li {
+                margin: 0;
+                padding: 0;
+            }
+
+                .shadowblockmenu-v ul li a {
+                    display: block;
+                    text-transform: uppercase;
+                    
+                    padding: 10px 15px;
+                    text-decoration: none;
+                    border-bottom: 1px solid #cacaca;
+                    border-right: 1px solid #cacaca; /*right border between menu items*/
+                    -moz-box-shadow: inset 7px 0 10px rgba(114,114,114, 0.6); /* Add inset shadow to each menu item. First 3 values in (114,114,114, 0.5) specifies rgb values, last specifies opacity */
+                    -webkit-box-shadow: inset 7px 0 10px rgba(114,114,114, 0.6);
+                    box-shadow: inset 7px 0 10px rgba(114,114,114, 0.6);
+                    text-shadow: 0 -1px 1px #cfcfcf; /* CSS text shadow to give text some depth */
+                    -moz-transition: all 0.2s ease-in-out; /* Enable CSS transition between property changes */
+                    -webkit-transition: all 0.2s ease-in-out;
+                    -o-transition: all 0.2s ease-in-out;
+                    -ms-transition: all 0.2s ease-in-out;
+                    transition: all 0.2s ease-in-out;
+                }
+
+                    .shadowblockmenu-v ul li a:hover, .shadowblockmenu-v ul li a.selected {
+                        color: black;
+                        -moz-box-shadow: inset 7px 0 10px rgba(216,89,39, 0.5), inset 0 0 15px rgba(216,89,39, 0.6), inset 0 0 20px rgba(216,89,39, 0.8); /* Add 3 inset shadows to each menu item  */
+                        -webkit-box-shadow: inset 7px 0 10px rgba(216,89,39, 0.5), inset 0 0 15px rgba(216,89,39, 0.6), inset 0 0 20px rgba(216,89,39, 0.8);
+                        box-shadow: inset 7px 0 10px rgba(216,89,39, 0.5), inset 0 0 15px rgba(216,89,39, 0.6), inset 0 0 20px rgba(216,89,39, 0.8);
+                    }
+</style>
+<div class="shadowblockmenu-v">
+    <ul>
+        <li><a href="@Url.Action("DepositAdd", "Deposit")" title="Home">Add Deposit</a></li>
+        <li><a href="@Url.Action("ViewDepositList", "Deposit")" title="About">Manage Deposit </a></li>
+    </ul>
+</div>
+<div id="menu8">
+    <ul>
+    </ul>
+</div>

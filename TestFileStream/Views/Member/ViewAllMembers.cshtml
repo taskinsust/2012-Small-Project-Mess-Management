@@ -1,0 +1,61 @@
+﻿@model IEnumerable<TestFileStream.Entity.Members>
+@{
+    ViewBag.Title = "View All Members";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="panel panel-primary" style="margin: 0 auto;max-width: 700px;min-width: 300px">
+    <div class="panel-heading">
+        <h2> Mess Member List</h2>
+    </div>
+    <div class="panel-body">
+        <div id="left" style="float: left; width: 40%;min-width: 100px;padding-top: 30px">
+            @Html.Partial("~/Views/Member/PartialMenuMember.cshtml")
+        </div>
+        <div id="right" style="float: right; width: 60%;min-width: 200px">
+            <p>
+                @Html.ActionLink("Add New Member", "MemberAdd")
+            </p>
+            <table class="table table-bordered table-condensed">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Address)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Contact)
+                    </th>
+                    <th>Action </th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Address)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Contact)
+                        </td>
+                        <td>
+                    @Html.ActionLink("Edit", "EditMembers", new { Id = item.Id }) |
+                    @Html.ActionLink("Details", "DEtailsMembers", new { Id = item.Id }) |
+                    @Html.ActionLink("Delete", "DeleteMembers", new { Id = item.Id })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

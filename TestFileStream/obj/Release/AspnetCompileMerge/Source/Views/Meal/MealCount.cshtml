@@ -1,0 +1,64 @@
+﻿@using System.Collections
+@model TestFileStream.Entity.Meal
+
+@{
+    ViewBag.Title = "MealCount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    IList<TestFileStream.Entity.Members> GetMembers;
+    GetMembers = ViewBag.Members;
+    int count = GetMembers.Count;
+}
+<div id="left" style="float:left ; width : 20% ;padding: 2% 0px 0px 2% ">
+    @Html.Partial("~/Views/Meal/PartialMealMenu.cshtml")
+</div>
+<div id="right" style="float:right ;width: 80%; padding: 2% 0px 0px 6% ">
+<h2 style="color:white">Add Daily Meal</h2>
+    <hr />
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MealDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MealDate, new { id ="date"})
+            @Html.ValidationMessageFor(model => model.MealDate)
+        </div>
+        <div class="editor-label">
+                @Html.LabelFor(model => model.Members)
+            </div>
+            <div class="editor-field">
+                @foreach(TestFileStream.Entity.Members members in GetMembers)
+                {
+                    <input name="selectedMemberId" type="checkbox" value="@members.Id"/><span style="color: coral">@members.FName</span> 
+                }
+                @*@Html.DropDownList("Members", String.Empty)*@
+                @Html.ValidationMessageFor(model => model.Members)
+            </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MealCount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MealCount)
+            @Html.ValidationMessageFor(model => model.MealCount)
+        </div>
+        <br />
+        <p>
+            <input class="btn btn-primary" type="submit" value="Add Meal " />
+        </p>
+}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#date").datepicker({ dateFormat: 'dd/mm/yy' });
+        });
+</script>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+    </div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

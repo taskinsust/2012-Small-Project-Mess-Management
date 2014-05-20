@@ -1,0 +1,43 @@
+﻿@model TestFileStream.Entity.Members
+
+@{
+    ViewBag.Title = "DEtailsMembers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css"> 
+    body {
+            background-image: url('../../images/image.jpg');        
+            background-repeat:repeat-x;   
+            background-position:top;
+            height: inherit;
+            background-size: cover;
+            
+        }</style>
+  
+<div id="full" style="width: 100%;height: 100%;padding: 0px 0px 0px 6%; ">
+    <h2 style="color:white"> Details Information For [@Html.DisplayFor(model => model.FName)] </h2>
+    <table class="table table-bordered table-condensed">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.FName)</th>
+            <th> @Html.DisplayNameFor(model => model.LName)</th>
+
+            <th>@Html.DisplayNameFor(model => model.Address)</th>
+            <th>@Html.DisplayNameFor(model => model.Contact)</th>
+
+
+        </tr>
+        <tr>
+            <td>@Html.DisplayFor(model => model.FName)</td>
+
+            <td>@Html.DisplayFor(model => model.LName)</td>
+            <td>@Html.DisplayFor(model => model.Address)</td>
+            <td>@Html.DisplayFor(model => model.Contact)</td>
+            
+        </tr>
+    
+    </table>
+<p>
+   @* @Html.ActionLink("Edit", "EditMembers", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")*@
+</p>
+</div>

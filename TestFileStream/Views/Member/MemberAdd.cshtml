@@ -1,0 +1,66 @@
+﻿@model TestFileStream.Entity.Members
+@{
+    ViewBag.Title = "MemberAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+ }
+<div class="panel panel-primary" style="margin: 0 auto; max-width: 700px; min-width: 300px">
+    <div class="panel-heading">
+        <h2>Add New Member</h2>
+    </div>
+    <div class="panel panel-title">
+        
+    </div>
+    <div class=" panel panel-body">
+        <div >
+            <div id="left" style="float: left; width: 40%; min-width: 100px;padding-top: 30px;">
+                @Html.Partial("~/Views/Member/PartialMenuMember.cshtml")
+            </div>
+            <div id="right" style="float: right; width: 60%; min-width: 200px">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.FName)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.FName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.FName)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.LName)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.LName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.LName)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Address)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Address)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Contact)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Contact, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Contact)
+                    </div>
+                    <br />
+                    <p>
+                        <input class="btn btn-primary" type="submit" value="Add" />
+                    </p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

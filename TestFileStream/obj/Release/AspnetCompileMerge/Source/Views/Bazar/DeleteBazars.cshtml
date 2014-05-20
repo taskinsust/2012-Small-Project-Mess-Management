@@ -1,0 +1,38 @@
+﻿@model TestFileStream.Entity.Bazar
+
+@{
+    ViewBag.Title = "DeleteBazars";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css"> 
+    body {
+        background-image: url(../../Images/image.jpg);      
+            background-repeat:repeat-x;   
+            background-position:top;
+            height: inherit;
+            background-size: cover;    
+        }
+
+</style>
+<div id="left" style="float:left ; width : 20% ;padding: 10% 0px 0px 2% "></div>
+<div id="right" style="float:right ;width: 80%; padding: 10% 0px 0px 6% ">
+
+    <h2 style="color:white">Are you sure you want to delete this? </h2> 
+    <table class ="table table-bordered table-condensed">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.CostDate)</th>
+            <th>@Html.DisplayNameFor(model => model.BazarAmmount)</th>
+        </tr>
+        <tr>
+            <td>@Html.DisplayFor(model => model.CostDate)</td>
+            <td>@Html.DisplayFor(model => model.BazarAmmount)</td>
+        </tr>
+    </table>
+
+@using (Html.BeginForm()) {
+    <p>
+        <input class="btn btn-primary" type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to BazarList", "ViewBazarList")
+    </p>
+}
+    </div>

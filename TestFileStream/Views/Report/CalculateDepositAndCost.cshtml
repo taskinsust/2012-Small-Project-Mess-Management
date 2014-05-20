@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "CalculateDepositAndCost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel panel-primary" style="margin: 0 auto; max-width: 700px; min-width: 300px">
+    <div class="panel-heading">
+        <h2>Calculate Deposit And Cost</h2>
+    </div>
+    <div class="panel-body">
+
+        <div id="left" style="">
+            @using (Html.BeginForm("CalculateDepositAndCost", "Report"))
+            {
+                <ul style="list-style-type: none; margin-left: 0px">
+                    <li style="display: inline">
+                        <input style="display: inline" type="date" id="Fdate" name="Fdate" placeholder="From Date" /></li>
+                    <li style="display: inline">
+                        <input style="display: inline" type="date" id="Tdate" name="Tdate" placeholder="To Date" /></li>
+                    <li style="display: inline">
+                        <input style="display: inline" class="btn btn-primary" type="submit" value="Generate User" />
+                    </li>
+                </ul>
+            }
+        </div>
+        <div id="right" style="">
+            @if (ViewBag.DEPOSIT != null)
+            {
+                <table class="table table-bordered" style="float: right">
+                    <tr>
+                        <th>Total Deposit</th>
+                        <th>Total Bazar Cost</th>
+                        <th>Total Meal</th>
+                        <th>Meal Rate</th>
+                        <th>Remaining Balance</th>
+                    </tr>
+                    <tr>
+                        <td>@ViewBag.DEPOSIT</td>
+                        <td>@ViewBag.TOTALBAZARCOST</td>
+                        <td>@ViewBag.TOTALMEAL</td>
+                        <td>@ViewBag.MEALRATE</td>
+                        <td>@ViewBag.REMAINBALANCE</td>
+                    </tr>
+                </table>    
+            }
+        </div>
+
+    </div>
+</div>

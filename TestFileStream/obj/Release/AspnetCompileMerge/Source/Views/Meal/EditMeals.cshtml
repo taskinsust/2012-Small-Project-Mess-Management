@@ -1,0 +1,51 @@
+﻿@model TestFileStream.Entity.Meal
+
+@{
+    ViewBag.Title = "EditMeals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    body {
+        background-image: url('../../images/image.jpg');
+        background-repeat: repeat-x;
+        background-position: top;
+        height: inherit;
+        background-size: cover;
+    }
+</style>
+<div id="full" style="width: 100%; height: 100%; padding: 0px 0px 0px 6%;">
+    <h2 style="color: white">Edit Meal list </h2>
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MealDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MealDate)
+            @Html.ValidationMessageFor(model => model.MealDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MealCount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MealCount)
+            @Html.ValidationMessageFor(model => model.MealCount)
+        </div>
+    <br />
+        <p>
+            <input class="btn btn-primary" type="submit" value="Save" />
+        </p>
+  
+}
+<div>
+    @Html.ActionLink("Back to MealList", "ViewMeal")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+    </div>

@@ -1,0 +1,62 @@
+﻿@model TestFileStream.Entity.Deposit
+
+@{
+    ViewBag.Title = "DepositAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="left" style="float: left; width: 20%; padding: 2% 0px 0px 2%">
+    @Html.Partial("~/Views/Deposit/PartialDepositMenu.cshtml")
+
+</div>
+<div id="right" style="float: right; width: 80%; padding: 2% 0px 0px 2%">
+
+    <h2 style="color:white"> Add Deposit</h2>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.DepositDate)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.DepositDate, new { id = "date" })
+                @Html.ValidationMessageFor(model => model.DepositDate)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Members)
+            </div>
+            <div class="editor-field">
+                @Html.DropDownList("Members", String.Empty)
+                @Html.ValidationMessageFor(model => model.Members)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.DepositAmmount)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.DepositAmmount)
+                @Html.ValidationMessageFor(model => model.DepositAmmount)
+            </div>
+            <br />
+            <p>
+                <input class="btn btn-primary" type="submit" value="Add Deposit" />
+            </p>
+
+    }
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#date").datepicker({ dateFormat: 'dd/mm/yy' });
+        });
+    </script>
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</div>
+</div>

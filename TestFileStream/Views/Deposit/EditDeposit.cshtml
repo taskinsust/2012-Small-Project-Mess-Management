@@ -1,0 +1,55 @@
+﻿@model TestFileStream.Entity.Deposit
+
+@{
+    ViewBag.Title = "EditDeposit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="panel panel-primary" style="margin: 0 auto; max-width: 700px; min-width: 300px">
+    <div class="panel-heading">
+        <h2>Edit Deposit</h2>
+    </div>
+    <div class="panel-body" style="min-width: 300px">
+        <div id="full" style="min-width: 300px">
+
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true)
+
+                @Html.HiddenFor(model => model.Id)
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.DepositDate)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.DepositDate)
+                    @Html.ValidationMessageFor(model => model.DepositDate)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.MonthName)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.MonthName)
+                    @Html.ValidationMessageFor(model => model.MonthName)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.DepositAmmount)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.DepositAmmount)
+                    @Html.ValidationMessageFor(model => model.DepositAmmount)
+                </div>
+                <br />
+                <p>
+                    <input class="btn btn-primary" type="submit" value="Update" />
+                </p>
+            }
+
+        </div>
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</div>

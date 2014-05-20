@@ -1,0 +1,59 @@
+﻿@model TestFileStream.Entity.Bazar
+
+@{
+    ViewBag.Title = "AddBazarCost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="left" style="float:left ; width : 20% ;padding: 2% 0px 0px 2% ">
+    @Html.Partial("~/Views/Bazar/PartialBazarMenu.cshtml")
+</div>
+
+<div id="right" style="float:right ;width: 80%; padding: 2% 0px 0px 6% ">
+<h2 style="color:white">Add Bazar Cost</h2>
+    <hr />
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CostDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CostDate, new { id ="date"})
+            @Html.ValidationMessageFor(model => model.CostDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Members)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Members",string.Empty)
+           
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BazarAmmount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BazarAmmount)
+            @Html.ValidationMessageFor(model => model.BazarAmmount)
+        </div>
+        <br />
+        <p>
+            <input class="btn btn-primary" type="submit" value="Create" />
+        </p>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+</div>
+    </div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#date").datepicker({ dateFormat: 'dd/mm/yy' });
+    });
+</script>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

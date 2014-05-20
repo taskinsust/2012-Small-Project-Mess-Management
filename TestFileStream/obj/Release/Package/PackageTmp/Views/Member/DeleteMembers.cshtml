@@ -1,0 +1,45 @@
+﻿@model TestFileStream.Entity.Members
+
+@{
+    ViewBag.Title = "DeleteMembers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css"> 
+    body {
+        background-image: url(../../Images/image.jpg);      
+            background-repeat:repeat-x;   
+            background-position:top;
+            height: inherit;
+            background-size: cover;
+            
+        }</style>
+<div id="left" style="float:left ; width : 20% ;padding: 10% 0px 0px 2% "></div>
+
+<div id="right" style="float:right ;width: 80%; padding: 10% 0px 0px 6% ">
+    
+    <h2 style="color:white"> Are you sure you want to delete this? </h2>
+    
+    <table class ="table table-bordered table-condensed">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.FName)</th>
+            <th>@Html.DisplayNameFor(model => model.LName)</th>
+            <th>@Html.DisplayNameFor(model => model.Address)</th>
+            <th>@Html.DisplayNameFor(model => model.Contact)</th>
+        </tr>
+        <tr>
+            <td>@Html.DisplayFor(model => model.FName)</td>
+            <td>@Html.DisplayFor(model => model.LName)</td>
+            <td>@Html.DisplayFor(model => model.Address)</td>
+            <td> @Html.DisplayFor(model => model.Contact)</td>
+        </tr>
+    </table>
+    
+    <br />
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        <p>
+            <input class="btn btn-primary" type="submit" value="Delete" /> |
+            @Html.ActionLink("Back to Members", "ViewAllMembers")
+        </p>
+    }
+</div>

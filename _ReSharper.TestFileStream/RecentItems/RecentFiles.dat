@@ -1,0 +1,66 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Home/f:Index.cshtml" caret="919" fromTop="23" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/f:Web.config" caret="679" fromTop="11" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Controllers/f:AccountController.cs" caret="2246" fromTop="28" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Controllers/f:BazarController.cs" caret="506" fromTop="18" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Member/f:EditMembers.cshtml" caret="1977" fromTop="17" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Member/f:PartialMealMenu.cshtml" caret="238" fromTop="0" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Member/f:PartialMenuMember.cshtml" caret="49" fromTop="2" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Shared/f:_Layout.cshtml" caret="1408" fromTop="18" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Member/f:MemberAdd.cshtml" caret="502" fromTop="14" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:App_Start/f:RouteConfig.cs" caret="518" fromTop="18" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Member/f:ViewAllMembers.cshtml" caret="683" fromTop="15" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Member/f:DeleteMembers.cshtml" caret="427" fromTop="11" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Member/f:DEtailsMembers.cshtml" caret="1429" fromTop="28" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Bazar/f:PartialBazarMenu.cshtml" caret="49" fromTop="2" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Report/f:DetailsReportPerUser.cshtml" caret="0" fromTop="0" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Deposit/f:PartialDepositMenu.cshtml" caret="545" fromTop="19" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Meal/f:ViewMeal.cshtml" caret="1462" fromTop="26" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Meal/f:PartialMealMenu.cshtml" caret="0" fromTop="0" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Meal/f:MealCount.cshtml" caret="0" fromTop="0" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Meal/f:Index.cshtml" caret="0" fromTop="0" />
+    <File id="7020124F-9FFC-4AC3-8F3D-AAB8E0240759/f:ClientTransactionalReport.cshtml/l:C!?Users?taskin?Desktop?PresentationCopyOSMS?OnnorokomSms?Areas?Report?Views?Report?ClientTransactionalReport.cshtml" caret="2881" fromTop="24" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Bazar/f:ViewBazarList.cshtml" caret="703" fromTop="18" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Deposit/f:DeleteDeposit.cshtml" caret="1093" fromTop="24" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Deposit/f:DetailsDeposit.cshtml" caret="1111" fromTop="28" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Deposit/f:EditDeposit.cshtml" caret="403" fromTop="11" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Deposit/f:Index.cshtml" caret="0" fromTop="0" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Deposit/f:ViewDepositList.cshtml" caret="1037" fromTop="24" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Bazar/f:AddBazarCost.cshtml" caret="1856" fromTop="26" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Deposit/f:DepositAdd.cshtml" caret="1335" fromTop="22" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Controllers/f:MemberController.cs" caret="590" fromTop="14" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Controllers/f:DepositController.cs" caret="4743" fromTop="23" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Controllers/f:BazarController.cs" caret="3383" fromTop="19" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Models/f:BazarModel.cs" caret="3093" fromTop="18" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Models/f:MealModel.cs" caret="3409" fromTop="19" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Controllers/f:MealController.cs" caret="3838" fromTop="14" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Meal/f:ViewMeal.cshtml" caret="340" fromTop="9" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Meal/f:MealCount.cshtml" caret="482" fromTop="15" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Content/d:bootstrap-3.0.3/d:css/f:bootstrap.min.css" caret="3216" fromTop="6" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Controllers/f:ReportController.cs" caret="4730" fromTop="16" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Report/f:CalculateDepositAndCost.cshtml" caret="1199" fromTop="24" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/f:Web.config" caret="2007" fromTop="28" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Controllers/f:AccountController.cs" caret="2302" fromTop="20" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Home/f:Index.cshtml" caret="83" fromTop="2" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:App_Start/f:RouteConfig.cs" caret="518" fromTop="18" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Member/f:PartialMenuMember.cshtml" caret="49" fromTop="2" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Member/f:MemberAdd.cshtml" caret="502" fromTop="14" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Member/f:ViewAllMembers.cshtml" caret="437" fromTop="10" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Shared/f:_Layout.cshtml" caret="1408" fromTop="3" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Member/f:EditMembers.cshtml" caret="2068" fromTop="17" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Member/f:DEtailsMembers.cshtml" caret="1429" fromTop="28" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Member/f:DeleteMembers.cshtml" caret="427" fromTop="11" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Deposit/f:PartialDepositMenu.cshtml" caret="545" fromTop="21" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Deposit/f:DepositAdd.cshtml" caret="1335" fromTop="22" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Deposit/f:ViewDepositList.cshtml" caret="1037" fromTop="24" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Deposit/f:EditDeposit.cshtml" caret="1745" fromTop="35" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Deposit/f:DetailsDeposit.cshtml" caret="1261" fromTop="31" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Deposit/f:DeleteDeposit.cshtml" caret="1276" fromTop="29" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Bazar/f:AddBazarCost.cshtml" caret="1856" fromTop="26" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Bazar/f:PartialBazarMenu.cshtml" caret="49" fromTop="2" />
+    <File id="5F298154-1577-4DF4-BFF4-76FC2C418673/d:Views/d:Bazar/f:ViewBazarList.cshtml" caret="703" fromTop="18" />
+  </RecentEdits>
+</RecentFiles>

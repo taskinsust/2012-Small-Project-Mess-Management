@@ -1,0 +1,71 @@
+﻿@model TestFileStream.Entity.Members
+
+@{
+    ViewBag.Title = "DetailsReportPerUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    TestFileStream.Entity.Members members = new TestFileStream.Entity.Members();
+    members = ViewBag.MEMBER;   
+}
+<div id="left" style="float:left ; width : 20% ;padding: 10% 0px 0px 5% ">
+@using (Html.BeginForm())
+{
+        @Html.DropDownList("Members", "Select A User")
+        @Html.Label("From Date", new { style = "color: white"})
+        <input style="color:black" type="date" id="Fdate" name="Fdate" />
+        @Html.Label("To Date" ,new { style = "color: white"})
+        <input style="color:black" type="date" id="Tdate" name="Tdate"/>
+        <br />
+        <p>
+            <input class="btn btn-primary" type="submit" value="Generate User" />
+        </p>
+}
+    </div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#Fdate").datepicker({ dateFormat: 'dd/mm/yy' });
+        $("#Tdate").datepicker({ dateFormat: 'dd/mm/yy' });
+    });
+</script>
+<div id="right" style="float:right ;width: 80%; padding: 10% 0px 0px 6% ">
+@if (ViewBag.MEMBER != null)
+{
+    <h2 style="color:white">Details Report Per User</h2>
+    <hr />
+    <table class="table table-bordered table-condensed">
+
+        <tr>
+            <th>Member Name 
+            </th>
+            <th>Contact Number  
+            </th>
+            <th>Deposit 
+            </th>
+            <th>Bazar Cost
+            </th>
+            <th>Meal Count
+            </th>
+            <th>Current Meal Rate 
+            </th>
+            <th>Total Cost For Meal
+            </th>
+            <th>Remain Tk 
+            </th>
+            <th>Meal Can Eat
+            </th>
+        </tr>
+        <tr>
+            <td>@members.FName</td>
+            <td>@members.Contact</td>
+            <td>@ViewBag.DEPOSITAMOUNTBYPERSON</td>
+            <td>@ViewBag.TOTALBAZARCOST</td>
+            <td>@ViewBag.MEALCOUNTBYPERSON</td>
+            <td>@ViewBag.MEALRATE</td>
+            <td>@ViewBag.COSTFORMEAL </td>
+            <td>@ViewBag.REMAIN</td>
+            <td>@ViewBag.APPMEALCANEAT</td>
+        </tr>
+    </table>
+}
+    </div>

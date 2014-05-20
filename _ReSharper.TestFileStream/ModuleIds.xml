@@ -1,0 +1,4 @@
+<Modules>
+  <Module PersistentId="5F298154-1577-4DF4-BFF4-76FC2C418673" ModuleId="TestFileStream" />
+  <Module PersistentId="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" ModuleId="WebMatrix.WebData" />
+</Modules>

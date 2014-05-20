@@ -1,0 +1,45 @@
+﻿@model TestFileStream.Entity.Members
+
+@{
+    ViewBag.Title = "DEtailsMembers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="panel panel-primary" style="margin: 0 auto; max-width: 700px; min-width: 300px">
+    <div class="panel-heading">
+        <h2 style="color: white">Details Information For [@Html.DisplayFor(model => model.FName)] </h2>
+    </div>
+
+    <div class="panel-body">
+        
+        <div id="full" style="max-width: 700px; min-width: 300px">
+           
+            <table class="table table-bordered table-condensed" style="margin: 0 auto; max-width: 600px;min-width: 300px">
+                
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.FName)</th>
+                    <th>@Html.DisplayNameFor(model => model.LName)</th>
+
+                    <th>@Html.DisplayNameFor(model => model.Address)</th>
+                    <th>@Html.DisplayNameFor(model => model.Contact)</th>
+
+
+                </tr>
+                <tr>
+                    <td>@Html.DisplayFor(model => model.FName)</td>
+
+                    <td>@Html.DisplayFor(model => model.LName)</td>
+                    <td>@Html.DisplayFor(model => model.Address)</td>
+                    <td>@Html.DisplayFor(model => model.Contact)</td>
+
+                </tr>
+
+            </table>
+            <br />
+                <a class="btn btn-default" style="margin-left: 36px" href="@Html.Action("ViewAllMembers")"> Back</a> 
+            <p>
+                @* @Html.ActionLink("Edit", "EditMembers", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")*@
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<TestFileStream.Entity.Members>
+@{
+    ViewBag.Title = "View All Members";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+   
+</style>
+<div id="left" style="float:left ; width : 20% ;padding: 7% 0px 0px 2% ">
+    @Html.Partial("~/Views/Member/PartialMenuMember.cshtml")
+</div>
+
+<div id="right" style="float:right ;width: 80%; padding: 5% 0px 0px 6% ">
+
+    <h2 style="color:white"> View All Members </h2>
+<p>
+    @Html.ActionLink("Add New Member","MemberAdd")
+</p>
+<table class ="table table-bordered table-condensed">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact)
+        </th>
+        <th> Action </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contact)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditMembers", new { Id=item.Id }) |
+            @Html.ActionLink("Details", "DEtailsMembers", new { Id=item.Id }) |
+            @Html.ActionLink("Delete", "DeleteMembers", new { Id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+</div>

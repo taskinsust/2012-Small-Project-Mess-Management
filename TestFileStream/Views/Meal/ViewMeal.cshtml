@@ -1,0 +1,77 @@
+﻿@model IEnumerable<TestFileStream.Entity.Meal>
+
+@{
+    ViewBag.Title = "ViewMeal";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<div id="left" style="float:left ; width : 20% ;padding: 7% 0px 0px 2% ">
+        @Html.Partial("~/Views/Meal/PartialMealMenu.cshtml")
+</div>*@
+<div class="panel panel-primary" style="margin: 0 auto; max-width: 800px; min-width: 300px">
+    <div class="panel-heading">
+        <h2>Manage Meal</h2>
+    </div>
+    <div class="panel-body">
+        <div id="right" style="min-width: 300px">
+    @using (Html.BeginForm("Search" , "Meal"))
+    {
+        <ul style="list-style-type: none; margin-left: -38px">
+            <li style="display: inline">
+                <input style="display: inline" type="text" name="sFname" placeholder="Search By First Name" /></li>
+            <li style="display: inline">From:
+                <input style="display: inline" type="date" id="Fdate" name="Fdate" /></li>
+            <li style="display: inline">To:
+                <input style="display: inline" type="date" id="Tdate" name="Tdate" /></li>
+            <li style="display: inline">
+                <input style="display: inline" class="btn btn-primary" type="submit" value="Search" />
+            </li>
+        </ul>
+          }
+    <h2 style="color: white">Manage Meal</h2>
+
+    <p>
+        @Html.ActionLink("Add Daily Meal", "MealCount")
+    </p>
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model =>model.Members.FName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MealDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MealCount)
+            </th>
+            <th>
+                Action
+            </th>
+        
+        </tr>
+
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Members.FName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MealDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MealCount)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditMeals", new { Id=item.Id }) |
+                    @Html.ActionLink("Details", "DEtailsMeal", new { Id=item.Id }) |
+                    @Html.ActionLink("Delete", "DeleteMeal", new { Id=item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+    </div>
+</div>
+
+
+       

@@ -1,0 +1,45 @@
+﻿@model TestFileStream.Entity.Members
+
+@{
+    ViewBag.Title = "DeleteMembers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="panel panel-primary" style="margin: 0 auto; max-width: 700px; min-width: 300px">
+    <div class="panel-heading">
+        <h2>Are you sure you want to delete this?</h2>
+    </div>
+    <div class="panel-body">
+        <div id="left" style="float: left; width: 40%;min-width: 100px">
+        @Html.Partial("~/Views/Member/PartialMenuMember.cshtml")     
+        </div>
+       
+        <div id="right" style="float: right; width: 60%;min-width: 200px">
+
+            <table class="table table-bordered table-condensed">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.FName)</th>
+                    <th>@Html.DisplayNameFor(model => model.LName)</th>
+                    <th>@Html.DisplayNameFor(model => model.Address)</th>
+                    <th>@Html.DisplayNameFor(model => model.Contact)</th>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayFor(model => model.FName)</td>
+                    <td>@Html.DisplayFor(model => model.LName)</td>
+                    <td>@Html.DisplayFor(model => model.Address)</td>
+                    <td>@Html.DisplayFor(model => model.Contact)</td>
+                </tr>
+            </table>
+
+            <br />
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <p>
+                    <input class="btn btn-primary" type="submit" value="Delete" />
+                    |
+             
+                </p>
+            }
+        </div>
+    </div>
+</div>

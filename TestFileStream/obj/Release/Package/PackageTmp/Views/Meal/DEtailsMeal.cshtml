@@ -1,0 +1,33 @@
+﻿@model TestFileStream.Entity.Meal
+
+@{
+    ViewBag.Title = "DEtailsMeal";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css"> 
+    body {
+        background-image: url('../../images/image.jpg');        
+        background-repeat:repeat-x;   
+        background-position:top;
+        height: inherit;
+        background-size: cover;
+            
+    }</style>
+
+<div id="full" style="width: 100%;height: 100%;padding: 0px 0px 0px 6%; ">
+    <h2 style="color:white"> Details Meal Information For [@ViewBag.NAME] </h2>
+<table class="table table-bordered table-condensed">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.MealDate)</th>
+        <th> @Html.DisplayNameFor(model => model.MealCount)</th>
+    </tr>
+    <tr>
+        <td>@Html.DisplayFor(model => model.MealDate)</td>
+        <td>@Html.DisplayFor(model => model.MealCount)</td>
+    </tr>
+</table>
+<p>
+   
+    @Html.ActionLink("Back to List", "Index")
+</p>
+    </div>

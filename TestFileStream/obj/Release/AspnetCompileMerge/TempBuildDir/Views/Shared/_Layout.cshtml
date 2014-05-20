@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mess Management System</title>
+
+    <link href="~/Content/bootstrap-3.0.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-3.0.3/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-3.0.3/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-3.0.3/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/jquery-ui-1.10.3.custom/development-bundle/themes/ui-lightness/jquery.ui.datepicker.css" rel="stylesheet" />
+
+
+    <meta name="viewport" content="width=device-width" />
+    <a href="~/Content/bootstrap-3.0.3/fonts/glyphicons-halflings-regular.ttf"></a>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Content/jquery-ui-1.10.3.custom/development-bundle/ui/jquery.ui.datepicker.js"></script>
+    <script src="~/Content/jquery-ui-1.10.3.custom/development-bundle/ui/minified/jquery.ui.datepicker.min.js"></script>
+    <style type="text/css">
+        body {
+            background-image: url('../images/image.jpg');        
+            background-repeat:repeat-x;   
+            background-position:top;
+            height: inherit;
+            background-size: cover;    
+        }
+        
+        table tr td {
+            color: white;
+            /*background-color:coral ;*/
+        }
+        table tr th {
+            text-decoration-color: white;
+            color: white;
+        }
+        .main {
+            width: auto;
+            height: auto;
+            min-height: 600px;
+            margin-top: 5px;
+            margin-left: 5px;
+            text-decoration-color: white;
+        }
+        /*.footer {
+          
+          min-height:400px;
+          width :100%;
+          margin: 0 auto;
+          color: #fff;
+          clear: both;
+          padding: 2em 2em;
+          background: #000;
+        }*/
+        #bs-example-navbar-collapse-1 {
+            background-image: url('.../Images/body_bg_1msob.jpg');
+            background-position-x: left;
+        }
+
+        li.active {
+            background-color: blue;
+            background-image: url('Images/body_bg_1msob.jpg');
+            background-position-x: left;
+        }
+
+        input, select {
+            display: block;
+            height: 30px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.428571429;
+            color: #555555;
+            vertical-align: middle;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        }
+
+            input:focus {
+                border-color: #66afe9;
+                outline: 0;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+            }
+
+            select:focus {
+                border-color: #66afe9;
+                outline: 0;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+            }
+
+        .editor-label {
+            font-size: medium;
+            font-weight: 100;
+            color:beige;
+        }
+
+        input[type="button"] {
+        }
+    </style>
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+    <div>
+
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Mess Management</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="@Url.Action("MemberAdd", "Member")">Members</a></li>
+                    <li class="active"><a href="@Url.Action("DepositAdd", "Deposit")">Deposit</a></li>
+                    <li class="active"><a href="@Url.Action("AddBazarCost", "Bazar")">Bazar</a></li>
+                    <li class="active"><a href="@Url.Action("MealCount", "Meal")">Meal</a></li>
+                    <li class="active"><a href="@Url.Action("DetailsReportPerUser", "Report")">Report</a></li>
+                    <li class="active"><a href="@Url.Action("CalculateDepositAndCost", "Report")">Deposit And Cost Details </a></li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+    </div>
+    <div id="warpper">
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div class="alert alert-danger">
+                <a class="close" data-dismiss="alert">×</a>
+                @ViewBag.ErrorMessage
+            </div>    
+        }
+
+        <div id="main">
+            @RenderBody()
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿@model TestFileStream.Entity.FileCollection
+
+@{
+    ViewBag.Title = "UploadFile";
+}
+
+<h2>UploadFile</h2>
+
+@using (Html.BeginForm("UploadFile", "UdvashFileStream", FormMethod.Post, new { ctype="multipart/form-data"})) 
+{
+    <input type="file" name ="FileName" />
+    <input type ="submit" name="submit" id ="submit" value="Upload" />
+    
+
+}
